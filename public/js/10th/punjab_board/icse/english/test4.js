@@ -1,514 +1,614 @@
 const questions = [
         
-        {
-          "num": 1,
-          "question_en": "Identify the correct form of the verb: 'She ____ to the park every Sunday.'",
-          "question_hi": "सही क्रिया रूप पहचानें: 'वह हर रविवार पार्क ____ जाती है।'",
-          "options_en": ["go", "goes", "going", "gone"],
-          "options_hi": ["जाती है", "जाती", "जाना", "गई"],
-          "answer_en": "goes",
-          "answer_hi": "जाती है",
-          "attempted": false
-        },
-        {
-          "num": 2,
-          "question_en": "Choose the correct preposition: 'The cat is hiding ____ the bed.'",
-          "question_hi": "सही पूर्वसर्ग चुनें: 'बिल्ली बिस्तर ____ छिपी हुई है।'",
-          "options_en": ["under", "on", "in", "at"],
-          "options_hi": ["के नीचे", "पर", "में", "पर"],
-          "answer_en": "under",
-          "answer_hi": "के नीचे",
-          "attempted": false
-        },
-        {
-          "num": 3,
-          "question_en": "Choose the correct conjunction: 'I wanted to go out, ____ it was raining.'",
-          "question_hi": "सही संयोजक चुनें: 'मैं बाहर जाना चाहता था, ____ बारिश हो रही थी।'",
-          "options_en": ["but", "and", "or", "because"],
-          "options_hi": ["लेकिन", "और", "या", "क्योंकि"],
-          "answer_en": "but",
-          "answer_hi": "लेकिन",
-          "attempted": false
-        },
-        {
-          "num": 4,
-          "question_en": "Identify the noun clause: 'I don’t know where he went.'",
-          "question_hi": "संज्ञा उपवाक्य पहचानें: 'मुझे नहीं पता वह कहाँ गया।'",
-          "options_en": ["I don't know", "where he went", "he went", "where"],
-          "options_hi": ["मुझे नहीं पता", "वह कहाँ गया", "वह गया", "कहाँ"],
-          "answer_en": "where he went",
-          "answer_hi": "वह कहाँ गया",
-          "attempted": false
-        },
-        {
-          "num": 5,
-          "question_en": "Choose the correct sentence: 'She _____ an umbrella.'",
-          "question_hi": "सही वाक्य चुनें: 'उसके पास _____ छाता है।'",
-          "options_en": ["has", "have", "had", "having"],
-          "options_hi": ["है", "हैं", "था", "रखा है"],
-          "answer_en": "has",
-          "answer_hi": "है",
-          "attempted": false
-        },
-        {
-          "num": 6,
-          "question_en": "Convert the following into passive voice: 'They made a cake.'",
-          "question_hi": "निम्नलिखित को पैसिव वॉयस में बदलें: 'उन्होंने एक केक बनाया।'",
-          "options_en": ["A cake was made by them.", "A cake is made by them.", "A cake was made by them.", "A cake is being made by them."],
-          "options_hi": ["एक केक उनके द्वारा बनाया गया था।", "एक केक उनके द्वारा बनाया जाता है।", "एक केक उनके द्वारा बनाया गया था।", "एक केक उनके द्वारा बन रहा है।"],
-          "answer_en": "A cake was made by them.",
-          "answer_hi": "एक केक उनके द्वारा बनाया गया था।",
-          "attempted": false
-        },
-        {
-          "num": 7,
-          "question_en": "Choose the correct form of the verb: 'He ____ his homework every day.'",
-          "question_hi": "सही क्रिया रूप चुनें: 'वह हर दिन अपना होमवर्क ____।'",
-          "options_en": ["do", "does", "doing", "did"],
-          "options_hi": ["करता है", "करता", "कर रहा है", "किया"],
-          "answer_en": "does",
-          "answer_hi": "करता है",
-          "attempted": false
-        },
-        {
-          "num": 8,
-          "question_en": "Identify the adverb: 'She quickly finished her work.'",
-          "question_hi": "क्रिया-विशेषण पहचानें: 'उसने जल्दी अपना काम पूरा किया।'",
-          "options_en": ["quickly", "finished", "work", "her"],
-          "options_hi": ["जल्दी", "पूरा किया", "काम", "उसका"],
-          "answer_en": "quickly",
-          "answer_hi": "जल्दी",
-          "attempted": false
-        },
-        {
-          "num": 9,
-          "question_en": "Fill in the blank: 'She is ____ than I am.'",
-          "question_hi": "रिक्त स्थान भरें: 'वह मुझसे ____ है।'",
-          "options_en": ["more clever", "clever", "most clever", "cleverer"],
-          "options_hi": ["अधिक समझदार", "समझदार", "सबसे समझदार", "समझदार है"],
-          "answer_en": "more clever",
-          "answer_hi": "अधिक समझदार",
-          "attempted": false
-        },
-        {
-          "num": 10,
-          "question_en": "Choose the correct form of the adjective: 'This is the ____ book I have ever read.'",
-          "question_hi": "सही विशेषण रूप चुनें: 'यह सबसे ____ किताब है जो मैंने कभी पढ़ी है।'",
-          "options_en": ["more interesting", "most interesting", "interesting", "interestingly"],
-          "options_hi": ["अधिक दिलचस्प", "सबसे दिलचस्प", "दिलचस्प", "दिलचस्पी से"],
-          "answer_en": "most interesting",
-          "answer_hi": "सबसे दिलचस्प",
-          "attempted": false
-        }
-      ,
+  
+    {
+      "num": 1,
+      "question_en": "Choose the correct word: 'She ____ finished her homework.'",
+      "question_hi": "सही शब्द चुनें: 'वह ____ अपना होमवर्क पूरा कर चुकी है।'",
+      "options_en": ["has", "have", "had", "is"],
+      "options_hi": ["है", "हैं", "था", "है"],
+      "answer_en": "has",
+      "answer_hi": "है",
+      "attempted": false
+    },
+    {
+      "num": 2,
+      "question_en": "Choose the correct form of the verb: 'He ____ to the gym every morning.'",
+      "question_hi": "क्रिया का सही रूप चुनें: 'वह हर सुबह ____ जिम जाता है।'",
+      "options_en": ["go", "goes", "going", "gone"],
+      "options_hi": ["जाता है", "जाता हूँ", "जा रहा है", "गया"],
+      "answer_en": "goes",
+      "answer_hi": "जाता है",
+      "attempted": false
+    },
+    {
+      "num": 3,
+      "question_en": "Which of these is a possessive pronoun?",
+      "question_hi": "इनमें से कौन सा स्वामित्व सूचक सर्वनाम है?",
+      "options_en": ["mine", "my", "I", "me"],
+      "options_hi": ["मेरा", "मेरे", "मैं", "मैंने"],
+      "answer_en": "mine",
+      "answer_hi": "मेरा",
+      "attempted": false
+    },
+    {
+      "num": 4,
+      "question_en": "Fill in the blank: 'We ____ to the park every Sunday.'",
+      "question_hi": "रिक्त स्थान भरें: 'हम हर रविवार ____ पार्क जाते हैं।'",
+      "options_en": ["go", "goes", "going", "gone"],
+      "options_hi": ["जाते हैं", "जाती है", "जा रहे हैं", "गए थे"],
+      "answer_en": "go",
+      "answer_hi": "जाते हैं",
+      "attempted": false
+    },
+    {
+      "num": 5,
+      "question_en": "Choose the correct conjunction: 'I will go to the market ____ it rains.'",
+      "question_hi": "सही संयोजक चुनें: 'मैं बाजार जाऊँगा ____ अगर बारिश होगी।'",
+      "options_en": ["if", "unless", "because", "although"],
+      "options_hi": ["अगर", "जब तक", "क्योंकि", "हालाँकि"],
+      "answer_en": "if",
+      "answer_hi": "अगर",
+      "attempted": false
+    },
+    {
+      "num": 6,
+      "question_en": "Which of these sentences is in the future tense?",
+      "question_hi": "इनमें से कौन सा वाक्य भविष्य काल में है?",
+      "options_en": [
+        "She goes to school every day.",
+        "She went to school yesterday.",
+        "She will go to school tomorrow.",
+        "She is going to school now."
+      ],
+      "options_hi": [
+        "वह हर दिन स्कूल जाती है।",
+        "वह कल स्कूल गई थी।",
+        "वह कल स्कूल जाएगी।",
+        "वह अभी स्कूल जा रही है।"
+      ],
+      "answer_en": "She will go to school tomorrow.",
+      "answer_hi": "वह कल स्कूल जाएगी।",
+      "attempted": false
+    },
+    {
+      "num": 7,
+      "question_en": "Fill in the blank: 'He ____ been to that restaurant before.'",
+      "question_hi": "रिक्त स्थान भरें: 'वह पहले ____ उस रेस्टोरेंट में गया है।'",
+      "options_en": ["has", "have", "had", "is"],
+      "options_hi": ["है", "हूँ", "था", "है"],
+      "answer_en": "has",
+      "answer_hi": "है",
+      "attempted": false
+    },
+    {
+      "num": 8,
+      "question_en": "Which of these sentences uses a comparative adjective?",
+      "question_hi": "कौन सा वाक्य एक तुलनात्मक विशेषण का उपयोग करता है?",
+      "options_en": [
+        "This is a good book.",
+        "She is taller than her brother.",
+        "He is the best player.",
+        "I like chocolate."
+      ],
+      "options_hi": [
+        "यह एक अच्छा किताब है।",
+        "वह अपने भाई से लंबी है।",
+        "वह सबसे अच्छा खिलाड़ी है।",
+        "मुझे चॉकलेट पसंद है।"
+      ],
+      "answer_en": "She is taller than her brother.",
+      "answer_hi": "वह अपने भाई से लंबी है।",
+      "attempted": false
+    },
+    {
+      "num": 9,
+      "question_en": "Choose the correct form: 'I ____ finished my homework.'",
+      "question_hi": "सही रूप चुनें: 'मैं ____ अपना होमवर्क पूरा कर चुका हूँ।'",
+      "options_en": ["have", "has", "had", "am"],
+      "options_hi": ["हूँ", "है", "था", "हूँ"],
+      "answer_en": "have",
+      "answer_hi": "हूँ",
+      "attempted": false
+    },
+    {
+      "num": 10,
+      "question_en": "Fill in the blank: 'I ____ reading a book when you called me.'",
+      "question_hi": "रिक्त स्थान भरें: 'जब तुमने मुझे कॉल किया, मैं ____ किताब पढ़ रहा था।'",
+      "options_en": ["was", "were", "am", "is"],
+      "options_hi": ["था", "थे", "हूँ", "है"],
+      "answer_en": "was",
+      "answer_hi": "था",
+      "attempted": false
+    }
+  ,
+  
       
-        {
-          "num": 11,
-          "question_en": "Identify the verb tense: 'She will have completed her homework by tomorrow.'",
-          "question_hi": "क्रिया काल पहचानें: 'वह कल तक अपना होमवर्क पूरा कर लेगी।'",
-          "options_en": ["Future perfect", "Present perfect", "Past perfect", "Future continuous"],
-          "options_hi": ["भविष्य काल का पूर्ण", "वर्तमान काल का पूर्ण", "भूतकाल का पूर्ण", "भविष्य काल निरंतर"],
-          "answer_en": "Future perfect",
-          "answer_hi": "भविष्य काल का पूर्ण",
-          "attempted": false
-        },
-        {
-          "num": 12,
-          "question_en": "Choose the correct sentence: 'He ____ the keys on the table.'",
-          "question_hi": "सही वाक्य चुनें: 'उसने ____ चाबी टेबल पर रखी।'",
-          "options_en": ["puts", "put", "putting", "putted"],
-          "options_hi": ["रखता है", "रखा", "रख रहा है", "रखा था"],
-          "answer_en": "put",
-          "answer_hi": "रखा",
-          "attempted": false
-        },
-        {
-          "num": 13,
-          "question_en": "Choose the correct form of the adjective: 'This is the ____ car I’ve ever driven.'",
-          "question_hi": "सही विशेषण रूप चुनें: 'यह सबसे ____ कार है जिसे मैंने कभी चलाया।'",
-          "options_en": ["fastest", "faster", "fast", "more fast"],
-          "options_hi": ["सबसे तेज", "तेज", "तेजतम", "अधिक तेज"],
-          "answer_en": "fastest",
-          "answer_hi": "सबसे तेज",
-          "attempted": false
-        },
-        {
-          "num": 14,
-          "question_en": "Fill in the blank: 'I haven’t seen him ____ yesterday.'",
-          "question_hi": "रिक्त स्थान भरें: 'मैंने उसे ____ कल नहीं देखा।'",
-          "options_en": ["since", "for", "from", "by"],
-          "options_hi": ["से", "के लिए", "से", "तक"],
-          "answer_en": "since",
-          "answer_hi": "से",
-          "attempted": false
-        },
-        {
-          "num": 15,
-          "question_en": "Convert into direct speech: 'He said he was tired.'",
-          "question_hi": "डायरेक्ट स्पीच में बदलें: 'उसने कहा कि वह थका हुआ था।'",
-          "options_en": ["He said, 'I am tired.'", "He said, 'I was tired.'", "He said, 'I am tiring.'", "He said, 'I will be tired.'"],
-          "options_hi": ["उसने कहा, 'मैं थका हुआ हूँ।'", "उसने कहा, 'मैं थका हुआ था।'", "उसने कहा, 'मैं थक रहा हूँ।'", "उसने कहा, 'मैं थका हुआ रहूँगा।'"],
-          "answer_en": "He said, 'I am tired.'",
-          "answer_hi": "उसने कहा, 'मैं थका हुआ हूँ।'",
-          "attempted": false
-        },
-        {
-          "num": 16,
-          "question_en": "Choose the correct article: 'He is ____ European.'",
-          "question_hi": "सही आर्टिकल चुनें: 'वह ____ यूरोपीय है।'",
-          "options_en": ["a", "an", "the", "no article"],
-          "options_hi": ["ए", "ऐन", "द", "कोई आर्टिकल नहीं"],
-          "answer_en": "a",
-          "answer_hi": "ए",
-          "attempted": false
-        },
-        {
-          "num": 17,
-          "question_en": "Choose the correct conjunction: 'I will go to the park ____ it stops raining.'",
-          "question_hi": "सही संयोजक चुनें: 'मैं पार्क जाऊँगा ____ बारिश रुक जाएगी।'",
-          "options_en": ["if", "and", "but", "so"],
-          "options_hi": ["यदि", "और", "लेकिन", "इसलिए"],
-          "answer_en": "if",
-          "answer_hi": "यदि",
-          "attempted": false
-        },
-        {
-          "num": 18,
-          "question_en": "Fill in the blank: 'The man ____ is standing there is my uncle.'",
-          "question_hi": "रिक्त स्थान भरें: 'वह आदमी जो वहाँ खड़ा है, मेरा चाचा है।'",
-          "options_en": ["who", "whom", "which", "whose"],
-          "options_hi": ["जो", "जिसे", "जो", "जिसका"],
-          "answer_en": "who",
-          "answer_hi": "जो",
-          "attempted": false
-        },
-        {
-          "num": 19,
-          "question_en": "Choose the correct verb form: 'She ____ already eaten lunch.'",
-          "question_hi": "सही क्रिया रूप चुनें: 'उसने पहले ही लंच ____ लिया है।'",
-          "options_en": ["has", "have", "had", "is"],
-          "options_hi": ["है", "हैं", "था", "है"],
-          "answer_en": "has",
-          "answer_hi": "है",
-          "attempted": false
-        },
-        {
-          "num": 20,
-          "question_en": "Identify the type of sentence: 'Close the door.'",
-          "question_hi": "वाक्य का प्रकार पहचानें: 'दरवाजा बंद करो।'",
-          "options_en": ["Declarative", "Interrogative", "Imperative", "Exclamatory"],
-          "options_hi": ["घोषणात्मक", "प्रश्नवाचक", "आज्ञार्थक", "विस्मयादिबोधक"],
-          "answer_en": "Imperative",
-          "answer_hi": "आज्ञार्थक",
-          "attempted": false
-        }
-      ,
+  
+    {
+      "num": 11,
+      "question_en": "Which of these sentences uses an indefinite pronoun?",
+      "question_hi": "इनमें से कौन सा वाक्य एक अनिश्चित सर्वनाम का उपयोग करता है?",
+      "options_en": [
+        "Everyone is here.",
+        "She went to the store.",
+        "I like my book.",
+        "He is playing soccer."
+      ],
+      "options_hi": [
+        "सभी यहाँ हैं।",
+        "वह स्टोर गई थी।",
+        "मुझे मेरी किताब पसंद है।",
+        "वह फुटबॉल खेल रहा है।"
+      ],
+      "answer_en": "Everyone is here.",
+      "answer_hi": "सभी यहाँ हैं।",
+      "attempted": false
+    },
+    {
+      "num": 12,
+      "question_en": "Choose the correct option: 'He ____ a great job.'",
+      "question_hi": "सही विकल्प चुनें: 'उसने ____ अच्छा काम किया।'",
+      "options_en": ["did", "does", "is doing", "was doing"],
+      "options_hi": ["किया", "करता है", "कर रहा है", "कर रहा था"],
+      "answer_en": "did",
+      "answer_hi": "किया",
+      "attempted": false
+    },
+    {
+      "num": 13,
+      "question_en": "Fill in the blank: 'I ____ waiting for the bus right now.'",
+      "question_hi": "रिक्त स्थान भरें: 'मैं अब ____ बस का इंतजार कर रहा हूँ।'",
+      "options_en": ["am", "is", "are", "was"],
+      "options_hi": ["हूँ", "है", "हैं", "था"],
+      "answer_en": "am",
+      "answer_hi": "हूँ",
+      "attempted": false
+    },
+    {
+      "num": 14,
+      "question_en": "Which of these sentences is in the past continuous tense?",
+      "question_hi": "इनमें से कौन सा वाक्य भूतकाल में निरंतर काल में है?",
+      "options_en": [
+        "She was reading a book.",
+        "She read a book.",
+        "She is reading a book.",
+        "She will read a book."
+      ],
+      "options_hi": [
+        "वह एक किताब पढ़ रही थी।",
+        "वह एक किताब पढ़ी।",
+        "वह एक किताब पढ़ रही है।",
+        "वह एक किताब पढ़ेगी।"
+      ],
+      "answer_en": "She was reading a book.",
+      "answer_hi": "वह एक किताब पढ़ रही थी।",
+      "attempted": false
+    },
+    {
+      "num": 15,
+      "question_en": "Fill in the blank: 'We ____ to the park every weekend.'",
+      "question_hi": "रिक्त स्थान भरें: 'हम हर सप्ताहांत ____ पार्क जाते हैं।'",
+      "options_en": ["go", "goes", "going", "went"],
+      "options_hi": ["जाते हैं", "जाती है", "जा रहे हैं", "गए थे"],
+      "answer_en": "go",
+      "answer_hi": "जाते हैं",
+      "attempted": false
+    },
+    {
+      "num": 16,
+      "question_en": "Which of these sentences is in the future perfect tense?",
+      "question_hi": "इनमें से कौन सा वाक्य भविष्य पूर्णकाल में है?",
+      "options_en": [
+        "She will have finished her homework by 5 PM.",
+        "She will finish her homework by 5 PM.",
+        "She finishes her homework at 5 PM.",
+        "She finished her homework by 5 PM."
+      ],
+      "options_hi": [
+        "वह 5 बजे तक अपना होमवर्क पूरा कर चुकी होगी।",
+        "वह 5 बजे तक अपना होमवर्क पूरा कर लेगी।",
+        "वह 5 बजे अपना होमवर्क करती है।",
+        "वह 5 बजे तक अपना होमवर्क पूरा कर चुकी थी।"
+      ],
+      "answer_en": "She will have finished her homework by 5 PM.",
+      "answer_hi": "वह 5 बजे तक अपना होमवर्क पूरा कर चुकी होगी।",
+      "attempted": false
+    },
+    {
+      "num": 17,
+      "question_en": "Choose the correct form of the verb: 'They ____ already left.'",
+      "question_hi": "क्रिया का सही रूप चुनें: 'वे पहले ही ____ जा चुके हैं।'",
+      "options_en": ["have", "had", "will have", "is"],
+      "options_hi": ["हैं", "थे", "हो चुके होंगे", "है"],
+      "answer_en": "have",
+      "answer_hi": "हैं",
+      "attempted": false
+    },
+    {
+      "num": 18,
+      "question_en": "Which of these is a preposition?",
+      "question_hi": "इनमें से कौन सा पूर्वसर्ग है?",
+      "options_en": ["on", "run", "quick", "beautiful"],
+      "options_hi": ["पर", "दौड़ना", "तेज़", "सुंदर"],
+      "answer_en": "on",
+      "answer_hi": "पर",
+      "attempted": false
+    },
+    {
+      "num": 19,
+      "question_en": "Choose the correct option: 'She ____ a new car next year.'",
+      "question_hi": "सही विकल्प चुनें: 'वह अगले साल ____ एक नई कार खरीदेगी।'",
+      "options_en": ["will buy", "buys", "buying", "bought"],
+      "options_hi": ["खरीदेगी", "खरीदती है", "खरीद रही है", "खरीदी थी"],
+      "answer_en": "will buy",
+      "answer_hi": "खरीदेगी",
+      "attempted": false
+    },
+    {
+      "num": 20,
+      "question_en": "Fill in the blank: 'They ____ always play football on Sundays.'",
+      "question_hi": "रिक्त स्थान भरें: 'वे हमेशा ____ रविवार को फुटबॉल खेलते हैं।'",
+      "options_en": ["do", "does", "are", "is"],
+      "options_hi": ["करते हैं", "करती है", "कर रहे हैं", "है"],
+      "answer_en": "do",
+      "answer_hi": "करते हैं",
+      "attempted": false
+    }
+  ,
+  
       
-        {
-          "num": 21,
-          "question_en": "Choose the correct word: 'I am ____ to see you again.'",
-          "question_hi": "सही शब्द चुनें: 'मैं आपको फिर से देखने के लिए ____ हूँ।'",
-          "options_en": ["happy", "happily", "happiness", "happiest"],
-          "options_hi": ["खुश", "खुशी से", "खुशी", "सबसे खुश"],
-          "answer_en": "happy",
-          "answer_hi": "खुश",
-          "attempted": false
-        },
-        {
-          "num": 22,
-          "question_en": "Identify the subject in the sentence: 'The cat chased the mouse.'",
-          "question_hi": "वाक्य में कर्ता पहचानें: 'बिल्ली ने चूहे का पीछा किया।'",
-          "options_en": ["The cat", "the mouse", "chased", "the cat chased"],
-          "options_hi": ["बिल्ली", "चूहा", "पीछा किया", "बिल्ली ने पीछा किया"],
-          "answer_en": "The cat",
-          "answer_hi": "बिल्ली",
-          "attempted": false
-        },
-        {
-          "num": 23,
-          "question_en": "Choose the correct form of the verb: 'She ____ to the store every day.'",
-          "question_hi": "सही क्रिया रूप चुनें: 'वह हर दिन दुकान पर ____ जाती है।'",
-          "options_en": ["go", "goes", "going", "gone"],
-          "options_hi": ["जाती है", "जाता है", "जा रही है", "गई है"],
-          "answer_en": "goes",
-          "answer_hi": "जाती है",
-          "attempted": false
-        },
-        {
-          "num": 24,
-          "question_en": "Fill in the blank: 'If it rains, we ____ indoors.'",
-          "question_hi": "रिक्त स्थान भरें: 'अगर बारिश होती है, तो हम ____ रहेंगे।'",
-          "options_en": ["will stay", "stayed", "stay", "stays"],
-          "options_hi": ["रहेंगे", "रह चुके हैं", "रहते हैं", "रहती है"],
-          "answer_en": "will stay",
-          "answer_hi": "रहेंगे",
-          "attempted": false
-        },
-        {
-          "num": 25,
-          "question_en": "Choose the correct sentence: 'I ____ to the park yesterday.'",
-          "question_hi": "सही वाक्य चुनें: 'मैं कल पार्क ____ था।'",
-          "options_en": ["went", "go", "going", "gone"],
-          "options_hi": ["गया", "जाता हूँ", "जा रहा था", "गया था"],
-          "answer_en": "went",
-          "answer_hi": "गया",
-          "attempted": false
-        },
-        {
-          "num": 26,
-          "question_en": "Choose the correct option: 'She did not _____ to the party.'",
-          "question_hi": "सही विकल्प चुनें: 'वह पार्टी में ____ नहीं गई।'",
-          "options_en": ["go", "went", "going", "gone"],
-          "options_hi": ["जाना", "गई", "जा रही", "गई थी"],
-          "answer_en": "go",
-          "answer_hi": "जाना",
-          "attempted": false
-        },
-        {
-          "num": 27,
-          "question_en": "Identify the error: 'I have never been to Japan before.'",
-          "question_hi": "त्रुटि पहचानें: 'मैं पहले कभी जापान नहीं गया हूँ।'",
-          "options_en": ["'I' should be 'we'", "Incorrect use of 'have been'", "No error", "Incorrect tense usage"],
-          "options_hi": ["'मैं' को 'हम' होना चाहिए", "'have been' का गलत उपयोग", "कोई त्रुटि नहीं", "काल का गलत प्रयोग"],
-          "answer_en": "No error",
-          "answer_hi": "कोई त्रुटि नहीं",
-          "attempted": false
-        },
-        {
-          "num": 28,
-          "question_en": "Fill in the blank: 'The book is ____ the table.'",
-          "question_hi": "रिक्त स्थान भरें: 'किताब ____ टेबल पर है।'",
-          "options_en": ["on", "in", "at", "under"],
-          "options_hi": ["पर", "में", "पर", "नीचे"],
-          "answer_en": "on",
-          "answer_hi": "पर",
-          "attempted": false
-        },
-        {
-          "num": 29,
-          "question_en": "Choose the correct option: 'I have been living here ____ five years.'",
-          "question_hi": "सही विकल्प चुनें: 'मैं यहाँ ____ पांच साल से रह रहा हूँ।'",
-          "options_en": ["for", "since", "from", "by"],
-          "options_hi": ["के लिए", "से", "से", "तक"],
-          "answer_en": "for",
-          "answer_hi": "के लिए",
-          "attempted": false
-        },
-        {
-          "num": 30,
-          "question_en": "Choose the correct sentence: 'She ____ a song when I saw her.'",
-          "question_hi": "सही वाक्य चुनें: 'जब मैंने उसे देखा, वह ____ गा रही थी।'",
-          "options_en": ["was singing", "is singing", "sang", "sings"],
-          "options_hi": ["गाती थी", "गाती है", "गाई", "गाती है"],
-          "answer_en": "was singing",
-          "answer_hi": "गाती थी",
-          "attempted": false
-        }
-      ,
-      
-        {
-          "num": 31,
-          "question_en": "Choose the correct word: 'The movie was ____ than I expected.'",
-          "question_hi": "सही शब्द चुनें: 'फिल्म मेरी अपेक्षा से ____ थी।'",
-          "options_en": ["better", "good", "best", "more good"],
-          "options_hi": ["बेहतर", "अच्छी", "सर्वश्रेष्ठ", "अधिक अच्छी"],
-          "answer_en": "better",
-          "answer_hi": "बेहतर",
-          "attempted": false
-        },
-        {
-          "num": 32,
-          "question_en": "Fill in the blank: 'She sings ____ than her sister.'",
-          "question_hi": "रिक्त स्थान भरें: 'वह अपनी बहन से ____ गाती है।'",
-          "options_en": ["more beautifully", "most beautifully", "beautifully more", "more beautiful"],
-          "options_hi": ["अधिक सुंदर", "सबसे सुंदर", "सुंदर रूप से अधिक", "अधिक सुंदर रूप से"],
-          "answer_en": "more beautifully",
-          "answer_hi": "अधिक सुंदर रूप से",
-          "attempted": false
-        },
-        {
-          "num": 33,
-          "question_en": "Identify the error: 'I have already finished my homework when he arrived.'",
-          "question_hi": "त्रुटि पहचानें: 'मैंने पहले ही अपना होमवर्क पूरा कर लिया था जब वह आया।'",
-          "options_en": ["'finished' should be 'had finished'", "Incorrect use of 'when'", "No error", "Incorrect tense usage"],
-          "options_hi": ["'पूरा किया' को 'पूरा कर लिया था' होना चाहिए", "'जब' का गलत उपयोग", "कोई त्रुटि नहीं", "काल का गलत प्रयोग"],
-          "answer_en": "'finished' should be 'had finished'",
-          "answer_hi": "'पूरा किया' को 'पूरा कर लिया था' होना चाहिए",
-          "attempted": false
-        },
-        {
-          "num": 34,
-          "question_en": "Choose the correct sentence: 'The teacher _____ us to study hard.'",
-          "question_hi": "सही वाक्य चुनें: 'शिक्षक ने हमें _____ कठिनाई से पढ़ने के लिए कहा।'",
-          "options_en": ["tells", "told", "telling", "tell"],
-          "options_hi": ["कहा", "कहते हैं", "कह रहे", "कहा है"],
-          "answer_en": "told",
-          "answer_hi": "कहा",
-          "attempted": false
-        },
-        {
-          "num": 35,
-          "question_en": "Complete the sentence: 'If I ____ you, I would not do that.'",
-          "question_hi": "वाक्य पूरा करें: 'अगर मैं तुम ____ होता, तो मैं वह नहीं करता।'",
-          "options_en": ["am", "were", "was", "will be"],
-          "options_hi": ["हूँ", "होता", "था", "होगा"],
-          "answer_en": "were",
-          "answer_hi": "होता",
-          "attempted": false
-        },
-        {
-          "num": 36,
-          "question_en": "Choose the correct word: 'The cake tastes ____.'",
-          "question_hi": "सही शब्द चुनें: 'केक का स्वाद ____ है।'",
-          "options_en": ["delicious", "deliciously", "more delicious", "deliciousness"],
-          "options_hi": ["स्वादिष्ट", "स्वादिष्ट रूप से", "अधिक स्वादिष्ट", "स्वादिष्टता"],
-          "answer_en": "delicious",
-          "answer_hi": "स्वादिष्ट",
-          "attempted": false
-        },
-        {
-          "num": 37,
-          "question_en": "Choose the correct preposition: 'She is interested ____ music.'",
-          "question_hi": "सही प्रीपोजिशन चुनें: 'वह संगीत में रुचि ____ है।'",
-          "options_en": ["in", "on", "at", "for"],
-          "options_hi": ["में", "पर", "पर", "के लिए"],
-          "answer_en": "in",
-          "answer_hi": "में",
-          "attempted": false
-        },
-        {
-          "num": 38,
-          "question_en": "Identify the type of sentence: 'Can you help me?'",
-          "question_hi": "वाक्य का प्रकार पहचानें: 'क्या आप मेरी मदद कर सकते हैं?'",
-          "options_en": ["Interrogative", "Imperative", "Exclamatory", "Declarative"],
-          "options_hi": ["प्रश्नवाचक", "आज्ञा वाचक", "विस्मयादिबोधक", "रचनात्मक"],
-          "answer_en": "Interrogative",
-          "answer_hi": "प्रश्नवाचक",
-          "attempted": false
-        },
-        {
-          "num": 39,
-          "question_en": "Choose the correct option: 'I have not seen him ____ Monday.'",
-          "question_hi": "सही विकल्प चुनें: 'मैंने उसे ____ सोमवार को नहीं देखा।'",
-          "options_en": ["since", "for", "on", "at"],
-          "options_hi": ["से", "के लिए", "पर", "पर"],
-          "answer_en": "since",
-          "answer_hi": "से",
-          "attempted": false
-        },
-        {
-          "num": 40,
-          "question_en": "Choose the correct word: 'The children are playing ____ the garden.'",
-          "question_hi": "सही शब्द चुनें: 'बच्चे ____ बगिया में खेल रहे हैं।'",
-          "options_en": ["in", "on", "at", "for"],
-          "options_hi": ["में", "पर", "पर", "के लिए"],
-          "answer_en": "in",
-          "answer_hi": "में",
-          "attempted": false
-        }
-      ,
-      
-        {
-          "num": 41,
-          "question_en": "Choose the correct article: '____ Earth revolves around the Sun.'",
-          "question_hi": "सही आर्टिकल चुनें: '____ पृथ्वी सूर्य के चारों ओर घूमती है।'",
-          "options_en": ["A", "An", "The", "No article"],
-          "options_hi": ["ए", "ऐन", "द", "कोई आर्टिकल नहीं"],
-          "answer_en": "The",
-          "answer_hi": "द",
-          "attempted": false
-        },
-        {
-          "num": 42,
-          "question_en": "Choose the correct tense: 'She ____ to the store yesterday.'",
-          "question_hi": "सही काल चुनें: 'वह कल दुकान पर ____ थी।'",
-          "options_en": ["goes", "went", "will go", "is going"],
-          "options_hi": ["जाती है", "गई थी", "जाएगी", "जा रही है"],
-          "answer_en": "went",
-          "answer_hi": "गई थी",
-          "attempted": false
-        },
-        {
-          "num": 43,
-          "question_en": "Fill in the blank: 'They ____ playing cricket when it started raining.'",
-          "question_hi": "रिक्त स्थान भरें: 'वे क्रिकेट ____ थे जब बारिश शुरू हो गई।'",
-          "options_en": ["was", "were", "are", "have"],
-          "options_hi": ["था", "थे", "हैं", "है"],
-          "answer_en": "were",
-          "answer_hi": "थे",
-          "attempted": false
-        },
-        {
-          "num": 44,
-          "question_en": "Identify the subject of the sentence: 'The cat is sleeping on the mat.'",
-          "question_hi": "वाक्य का विषय पहचानें: 'बिल्ली चटाई पर सो रही है।'",
-          "options_en": ["The cat", "is sleeping", "on the mat", "the mat"],
-          "options_hi": ["बिल्ली", "सो रही है", "चटाई पर", "चटाई"],
-          "answer_en": "The cat",
-          "answer_hi": "बिल्ली",
-          "attempted": false
-        },
-        {
-          "num": 45,
-          "question_en": "Choose the correct conjunction: 'I will go to the market ____ it rains.'",
-          "question_hi": "सही कंजंक्शन चुनें: 'मैं बाजार जाऊँगा ____ बारिश होगी।'",
-          "options_en": ["if", "unless", "because", "so"],
-          "options_hi": ["अगर", "जब तक", "क्योंकि", "इसलिए"],
-          "answer_en": "if",
-          "answer_hi": "अगर",
-          "attempted": false
-        },
-        {
-          "num": 46,
-          "question_en": "Convert to direct speech: 'He said he would come tomorrow.'",
-          "question_hi": "डायरेक्ट स्पीच में बदलें: 'उसने कहा कि वह कल आएगा।'",
-          "options_en": ["He said, 'I will come tomorrow.'", "He said, 'He will come tomorrow.'", "He says, 'I will come tomorrow.'", "He said, 'He would come tomorrow.'"],
-          "options_hi": ["उसने कहा, 'मैं कल आऊँगा।'", "उसने कहा, 'वह कल आएगा।'", "वह कहता है, 'मैं कल आऊँगा।'", "उसने कहा, 'वह कल आएगा।'"],
-          "answer_en": "He said, 'I will come tomorrow.'",
-          "answer_hi": "उसने कहा, 'मैं कल आऊँगा।'",
-          "attempted": false
-        },
-        {
-          "num": 47,
-          "question_en": "Choose the correct option: 'She is the ____ student in the class.'",
-          "question_hi": "सही विकल्प चुनें: 'वह कक्षा में ____ छात्रा है।'",
-          "options_en": ["best", "better", "good", "more better"],
-          "options_hi": ["सर्वश्रेष्ठ", "बेहतर", "अच्छी", "अधिक अच्छी"],
-          "answer_en": "best",
-          "answer_hi": "सर्वश्रेष्ठ",
-          "attempted": false
-        },
-        {
-          "num": 48,
-          "question_en": "Identify the correct sentence: 'I ____ a book when you called me.'",
-          "question_hi": "सही वाक्य पहचानें: 'जब तुमने मुझे कॉल किया, मैं ____ किताब पढ़ रहा था।'",
-          "options_en": ["read", "reads", "was reading", "had read"],
-          "options_hi": ["पढ़ता था", "पढ़ रही थी", "पढ़ रहा था", "पढ़ चुका था"],
-          "answer_en": "was reading",
-          "answer_hi": "पढ़ रहा था",
-          "attempted": false
-        },
-        {
-          "num": 49,
-          "question_en": "Fill in the blank: 'The children are playing ____ the park.'",
-          "question_hi": "रिक्त स्थान भरें: 'बच्चे ____ पार्क में खेल रहे हैं।'",
-          "options_en": ["in", "on", "at", "by"],
-          "options_hi": ["में", "पर", "पर", "के पास"],
-          "answer_en": "in",
-          "answer_hi": "में",
-          "attempted": false
-        },
-        {
-          "num": 50,
-          "question_en": "Choose the correct word: 'She ____ finished her homework.'",
-          "question_hi": "सही शब्द चुनें: 'वह ____ अपना होमवर्क पूरा कर चुकी है।'",
-          "options_en": ["has", "have", "had", "is"],
-          "options_hi": ["है", "हैं", "था", "है"],
-          "answer_en": "has",
-          "answer_hi": "है",
-          "attempted": false
-        }
-      
+  
+    {
+      "num": 21,
+      "question_en": "Choose the correct article: 'He is ____ honest man.'",
+      "question_hi": "सही आर्टिकल चुनें: 'वह ____ ईमानदार आदमी है।'",
+      "options_en": ["an", "a", "the", "none"],
+      "options_hi": ["एक", "एक", "वह", "कोई नहीं"],
+      "answer_en": "an",
+      "answer_hi": "एक",
+      "attempted": false
+    },
+    {
+      "num": 22,
+      "question_en": "Which of these is an example of an abstract noun?",
+      "question_hi": "इनमें से कौन एक अमूर्त संज्ञा का उदाहरण है?",
+      "options_en": ["happiness", "dog", "car", "house"],
+      "options_hi": ["खुशी", "कुत्ता", "गाड़ी", "घर"],
+      "answer_en": "happiness",
+      "answer_hi": "खुशी",
+      "attempted": false
+    },
+    {
+      "num": 23,
+      "question_en": "Fill in the blank: 'I ____ a song when the phone rang.'",
+      "question_hi": "रिक्त स्थान भरें: 'मैं एक गाना ____ रहा था जब फोन बजा।'",
+      "options_en": ["was singing", "am singing", "sings", "will sing"],
+      "options_hi": ["गा रहा था", "गा रहा हूँ", "गाता है", "गाएगा"],
+      "answer_en": "was singing",
+      "answer_hi": "गा रहा था",
+      "attempted": false
+    },
+    {
+      "num": 24,
+      "question_en": "Which sentence contains an adverb?",
+      "question_hi": "किस वाक्य में क्रिया विशेषण है?",
+      "options_en": [
+        "She sings beautifully.",
+        "She is a singer.",
+        "She sang a song.",
+        "She was singing."
+      ],
+      "options_hi": [
+        "वह सुंदरता से गाती है।",
+        "वह एक गायिका है।",
+        "उसने एक गाना गाया।",
+        "वह गा रही थी।"
+      ],
+      "answer_en": "She sings beautifully.",
+      "answer_hi": "वह सुंदरता से गाती है।",
+      "attempted": false
+    },
+    {
+      "num": 25,
+      "question_en": "Choose the correct option: 'There ____ many apples on the tree.'",
+      "question_hi": "सही विकल्प चुनें: 'पेड़ पर ____ बहुत सारे सेब हैं।'",
+      "options_en": ["are", "is", "was", "has"],
+      "options_hi": ["हैं", "है", "था", "है"],
+      "answer_en": "are",
+      "answer_hi": "हैं",
+      "attempted": false
+    },
+    {
+      "num": 26,
+      "question_en": "Choose the correct verb form: 'She ____ not want to go.'",
+      "question_hi": "सही क्रिया रूप चुनें: 'वह जाना नहीं ____।'",
+      "options_en": ["does", "do", "did", "is"],
+      "options_hi": ["चाहती", "चाहते", "चाहती थी", "है"],
+      "answer_en": "does",
+      "answer_hi": "चाहती",
+      "attempted": false
+    },
+    {
+      "num": 27,
+      "question_en": "Fill in the blank: 'The sun ____ in the east.'",
+      "question_hi": "रिक्त स्थान भरें: 'सूरज ____ से उगता है।'",
+      "options_en": ["rises", "rise", "rose", "rising"],
+      "options_hi": ["उगता है", "उगते हैं", "उगा", "उग रहा है"],
+      "answer_en": "rises",
+      "answer_hi": "उगता है",
+      "attempted": false
+    },
+    {
+      "num": 28,
+      "question_en": "Which of these is a correct plural noun?",
+      "question_hi": "इनमें से कौन सा सही बहुवचन संज्ञा है?",
+      "options_en": ["children", "childs", "childes", "childen"],
+      "options_hi": ["बच्चे", "बच्चों", "बच्चियों", "बच्चीयों"],
+      "answer_en": "children",
+      "answer_hi": "बच्चे",
+      "attempted": false
+    },
+    {
+      "num": 29,
+      "question_en": "Choose the correct pronoun: '____ is my best friend.'",
+      "question_hi": "सही सर्वनाम चुनें: '____ मेरा सबसे अच्छा दोस्त है।'",
+      "options_en": ["He", "Him", "His", "He's"],
+      "options_hi": ["वह", "उसे", "उसका", "वह है"],
+      "answer_en": "He",
+      "answer_hi": "वह",
+      "attempted": false
+    },
+    {
+      "num": 30,
+      "question_en": "Choose the correct word order: 'book / a / reading / I / am'",
+      "question_hi": "सही शब्द क्रम चुनें: 'book / a / reading / I / am'",
+      "options_en": [
+        "I am reading a book.",
+        "I reading a book am.",
+        "Am I reading a book.",
+        "Reading a book I am."
+      ],
+      "options_hi": [
+        "मैं एक किताब पढ़ रहा हूँ।",
+        "मैं पढ़ रहा किताब एक हूँ।",
+        "क्या मैं एक किताब पढ़ रहा हूँ?",
+        "एक किताब पढ़ रहा हूँ मैं।"
+      ],
+      "answer_en": "I am reading a book.",
+      "answer_hi": "मैं एक किताब पढ़ रहा हूँ।",
+      "attempted": false
+    }
+  ,
+  
+  
+    {
+      "num": 31,
+      "question_en": "Choose the correct conjunction: 'I will go to the party ____ I finish my homework.'",
+      "question_hi": "सही संयोजक चुनें: 'मैं पार्टी में जाऊँगा ____ मैं अपना होमवर्क खत्म कर लूँ।'",
+      "options_en": ["after", "before", "until", "while"],
+      "options_hi": ["बाद", "पहले", "तक", "जब"],
+      "answer_en": "after",
+      "answer_hi": "बाद",
+      "attempted": false
+    },
+    {
+      "num": 32,
+      "question_en": "Which of these is a superlative adjective?",
+      "question_hi": "इनमें से कौन सा सबसे उत्कृष्ट विशेषण है?",
+      "options_en": ["tallest", "taller", "tall", "more tall"],
+      "options_hi": ["सबसे लंबा", "लंबा", "लंबा", "ज्यादा लंबा"],
+      "answer_en": "tallest",
+      "answer_hi": "सबसे लंबा",
+      "attempted": false
+    },
+    {
+      "num": 33,
+      "question_en": "Fill in the blank: 'I ____ going to the market.'",
+      "question_hi": "रिक्त स्थान भरें: 'मैं ____ बाजार जा रहा हूँ।'",
+      "options_en": ["am", "is", "are", "were"],
+      "options_hi": ["हूँ", "है", "हैं", "था"],
+      "answer_en": "am",
+      "answer_hi": "हूँ",
+      "attempted": false
+    },
+    {
+      "num": 34,
+      "question_en": "Which of these sentences is in the passive voice?",
+      "question_hi": "इनमें से कौन सा वाक्य passive voice में है?",
+      "options_en": [
+        "She wrote a letter.",
+        "A letter was written by her.",
+        "She is writing a letter.",
+        "She has written a letter."
+      ],
+      "options_hi": [
+        "उसने एक पत्र लिखा।",
+        "एक पत्र उसके द्वारा लिखा गया।",
+        "वह एक पत्र लिख रही है।",
+        "उसने एक पत्र लिखा है।"
+      ],
+      "answer_en": "A letter was written by her.",
+      "answer_hi": "एक पत्र उसके द्वारा लिखा गया।",
+      "attempted": false
+    },
+    {
+      "num": 35,
+      "question_en": "Fill in the blank: 'We ____ to the beach last weekend.'",
+      "question_hi": "रिक्त स्थान भरें: 'हम पिछले सप्ताहांत ____ समुद्र तट पर गए थे।'",
+      "options_en": ["went", "go", "will go", "are going"],
+      "options_hi": ["गए थे", "जाते हैं", "जाएँगे", "जा रहे हैं"],
+      "answer_en": "went",
+      "answer_hi": "गए थे",
+      "attempted": false
+    },
+    {
+      "num": 36,
+      "question_en": "Choose the correct form of the verb: 'He ____ to the store every day.'",
+      "question_hi": "क्रिया का सही रूप चुनें: 'वह हर दिन ____ दुकान पर जाता है।'",
+      "options_en": ["goes", "go", "went", "going"],
+      "options_hi": ["जाता है", "जाता हूँ", "गया था", "जा रहा है"],
+      "answer_en": "goes",
+      "answer_hi": "जाता है",
+      "attempted": false
+    },
+    {
+      "num": 37,
+      "question_en": "Choose the correct question tag: 'You are coming, ____?'",
+      "question_hi": "सही प्रश्न चिह्न चुनें: 'तुम आ रहे हो, ____?'",
+      "options_en": ["aren't you?", "are you?", "will you?", "won't you?"],
+      "options_hi": ["क्या नहीं?", "क्या?", "क्या तुम?", "क्या तुम नहीं?"],
+      "answer_en": "aren't you?",
+      "answer_hi": "क्या नहीं?",
+      "attempted": false
+    },
+    {
+      "num": 38,
+      "question_en": "Which of these is a possessive pronoun?",
+      "question_hi": "इनमें से कौन सा स्वामित्व सूचक सर्वनाम है?",
+      "options_en": ["mine", "my", "I", "me"],
+      "options_hi": ["मेरा", "मेरे", "मैं", "मैंने"],
+      "answer_en": "mine",
+      "answer_hi": "मेरा",
+      "attempted": false
+    },
+    {
+      "num": 39,
+      "question_en": "Fill in the blank: 'I ____ never been to that restaurant.'",
+      "question_hi": "रिक्त स्थान भरें: 'मैं कभी ____ उस रेस्टोरेंट में नहीं गया हूँ।'",
+      "options_en": ["have", "had", "has", "am"],
+      "options_hi": ["हूँ", "था", "है", "हूँ"],
+      "answer_en": "have",
+      "answer_hi": "हूँ",
+      "attempted": false
+    },
+    {
+      "num": 40,
+      "question_en": "Choose the correct option: 'She has ____ finished her homework.'",
+      "question_hi": "सही विकल्प चुनें: 'उसने ____ अपना होमवर्क पूरा किया है।'",
+      "options_en": ["already", "yet", "never", "still"],
+      "options_hi": ["पहले ही", "अब तक", "कभी नहीं", "अभी भी"],
+      "answer_en": "already",
+      "answer_hi": "पहले ही",
+      "attempted": false
+    }
+  ,
+  {
+    "num": 41,
+    "question_en": "Choose the correct sentence: 'The teacher told me ____ go to the library.'",
+    "question_hi": "सही वाक्य चुनें: 'अध्यापक ने मुझे ____ पुस्तकालय जाने को कहा।'",
+    "options_en": ["to", "that", "for", "and"],
+    "options_hi": ["जाने", "कि", "के लिए", "और"],
+    "answer_en": "to",
+    "answer_hi": "जाने",
+    "attempted": false
+  },
+  {
+    "num": 42,
+    "question_en": "Fill in the blank: 'She ____ her homework before the teacher arrived.'",
+    "question_hi": "रिक्त स्थान भरें: 'वह अपने होमवर्क ____ शिक्षक के आने से पहले पूरा कर चुकी थी।'",
+    "options_en": ["had finished", "finished", "finishes", "is finishing"],
+    "options_hi": ["पूरा कर चुकी थी", "पूरा किया", "पूरा करती है", "पूरा कर रही है"],
+    "answer_en": "had finished",
+    "answer_hi": "पूरा कर चुकी थी",
+    "attempted": false
+  },
+  {
+    "num": 43,
+    "question_en": "Which of these is a conjunction?",
+    "question_hi": "इनमें से कौन सा संयोजक है?",
+    "options_en": ["and", "book", "beautiful", "run"],
+    "options_hi": ["और", "किताब", "सुंदर", "दौड़ना"],
+    "answer_en": "and",
+    "answer_hi": "और",
+    "attempted": false
+  },
+  {
+    "num": 44,
+    "question_en": "Choose the correct form: 'We ____ to the park when it started raining.'",
+    "question_hi": "सही रूप चुनें: 'जब बारिश शुरू हुई, हम ____ पार्क में थे।'",
+    "options_en": ["were walking", "walked", "are walking", "will walk"],
+    "options_hi": ["चल रहे थे", "चले थे", "जा रहे हैं", "चलेंगे"],
+    "answer_en": "were walking",
+    "answer_hi": "चल रहे थे",
+    "attempted": false
+  },
+  {
+    "num": 45,
+    "question_en": "Choose the correct sentence: '____ a good movie!'",
+    "question_hi": "सही वाक्य चुनें: '____ एक अच्छी फिल्म!'",
+    "options_en": ["It is", "This is", "That is", "There is"],
+    "options_hi": ["यह है", "यह है", "वह है", "वहाँ है"],
+    "answer_en": "It is",
+    "answer_hi": "यह है",
+    "attempted": false
+  },
+
+  
+    {
+      "num": 46,
+      "question_en": "Which of these is an example of a collective noun?",
+      "question_hi": "इनमें से कौन सा एक सामूहिक संज्ञा का उदाहरण है?",
+      "options_en": ["team", "dog", "city", "book"],
+      "options_hi": ["टीम", "कुत्ता", "शहर", "किताब"],
+      "answer_en": "team",
+      "answer_hi": "टीम",
+      "attempted": false
+    },
+    {
+      "num": 47,
+      "question_en": "Fill in the blank: 'She ____ to the gym every morning.'",
+      "question_hi": "रिक्त स्थान भरें: 'वह हर सुबह जिम ____ जाती है।'",
+      "options_en": ["goes", "went", "going", "go"],
+      "options_hi": ["जाती है", "गई थी", "जा रही है", "जाती हूँ"],
+      "answer_en": "goes",
+      "answer_hi": "जाती है",
+      "attempted": false
+    },
+    {
+      "num": 48,
+      "question_en": "Choose the correct option: 'By the time we arrived, they ____ finished the meeting.'",
+      "question_hi": "सही विकल्प चुनें: 'जब तक हम पहुँचे, वे ____ बैठक समाप्त कर चुके थे।'",
+      "options_en": ["had", "have", "will have", "were"],
+      "options_hi": ["थे", "है", "होने वाले थे", "थे"],
+      "answer_en": "had",
+      "answer_hi": "थे",
+      "attempted": false
+    },
+    {
+      "num": 49,
+      "question_en": "Which of these sentences is in the past perfect tense?",
+      "question_hi": "इनमें से कौन सा वाक्य भूतकाल पूर्णकाल में है?",
+      "options_en": [
+        "She was writing a letter.",
+        "She writes a letter.",
+        "She had written a letter.",
+        "She will write a letter."
+      ],
+      "options_hi": [
+        "वह एक पत्र लिख रही थी।",
+        "वह एक पत्र लिखती है।",
+        "वह एक पत्र लिख चुकी थी।",
+        "वह एक पत्र लिखेगी।"
+      ],
+      "answer_en": "She had written a letter.",
+      "answer_hi": "वह एक पत्र लिख चुकी थी।",
+      "attempted": false
+    },
+    {
+      "num": 50,
+      "question_en": "Choose the correct word: 'They ____ playing football at 5 PM yesterday.'",
+      "question_hi": "सही शब्द चुनें: 'वे कल शाम 5 बजे ____ फुटबॉल खेल रहे थे।'",
+      "options_en": ["were", "was", "is", "are"],
+      "options_hi": ["थे", "था", "है", "हैं"],
+      "answer_en": "were",
+      "answer_hi": "थे",
+      "attempted": false
+    }
+  ,
+  
+
+
       
       
       
