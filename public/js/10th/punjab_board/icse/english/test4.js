@@ -604,15 +604,7 @@ const questions = [
       "answer_en": "were",
       "answer_hi": "थे",
       "attempted": false
-    }
-  ,
-  
-
-
-      
-      
-      
-      
+    }     
 ];
 let currentQuestion = 0;
 let language = "en"; // Default English

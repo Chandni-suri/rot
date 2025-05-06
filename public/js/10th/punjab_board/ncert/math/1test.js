@@ -1032,119 +1032,126 @@ let timeLeft = 10800; // 5-minute timer
 let timerInterval;
 
 function loadQuestion(index) {
-        const questionText = language === "en" ? questions[index].question_en : questions[index].question_hi;
-        const optionsArray = language === "en" ? questions[index].options_en : questions[index].options_hi;
+  const questionText = language === "en" ? questions[index].question_en : questions[index].question_hi;
+  const optionsArray = language === "en" ? questions[index].options_en : questions[index].options_hi;
 
-        document.getElementById("question").textContent = `${questions[index].num}. ${questionText}`;
-        document.getElementById("questionCounter").textContent = `Question ${index + 1} of ${questions.length}`;
+  document.getElementById("question").textContent = `${questions[index].num}. ${questionText}`;
+  document.getElementById("questionCounter").textContent = `Question ${index + 1} of ${questions.length}`;
 
-        const optionsElement = document.getElementById("options");
-        optionsElement.innerHTML = "";
+  const optionsElement = document.getElementById("options");
+  optionsElement.innerHTML = "";
 
-        optionsArray.forEach(option => {
-                optionsElement.innerHTML += `<li><input type="radio" name="option" value="${option}" onclick="markAttempted(${index}, '${option}')"> ${option}</li>`;
-        });
+  optionsArray.forEach(option => {
+      const isChecked = questions[index].selected === option ? "checked" : "";
+      optionsElement.innerHTML += `<li><input type="radio" name="option" value="${option}" ${isChecked} onclick="markAttempted(${index}, '${option}')"> ${option}</li>`;
+  });
 
-        updateNavigation();
+  updateNavigation();
 }
 
 function markAttempted(index, selectedAnswer) {
-        questions[index].attempted = true;
-        questions[index].selected = selectedAnswer;
-        updateNavigation();
+  questions[index].attempted = true;
+  questions[index].selected = selectedAnswer;
+  updateNavigation();
 }
 
 function nextQuestion() {
-        if (currentQuestion < questions.length - 1) {
-                currentQuestion++;
-                loadQuestion(currentQuestion);
-        }
+  if (currentQuestion < questions.length - 1) {
+      currentQuestion++;
+      loadQuestion(currentQuestion);
+  }
 }
 
 function prevQuestion() {
-        if (currentQuestion > 0) {
-                currentQuestion--;
-                loadQuestion(currentQuestion);
-        }
+  if (currentQuestion > 0) {
+      currentQuestion--;
+      loadQuestion(currentQuestion);
+  }
 }
 
 function changeLanguage() {
-        language = document.getElementById("languageSelect").value;
-        loadQuestion(currentQuestion);
+  language = document.getElementById("languageSelect").value;
+  loadQuestion(currentQuestion);
 }
 
 function submitQuiz() {
-        let confirmation = confirm("Are you sure you want to submit the test?");
-        if (!confirmation) return;
+  let confirmation = confirm(language === "en" ? "Are you sure you want to submit the test?" : "क्या आप वाकई टेस्ट सबमिट करना चाहते हैं?");
+  if (!confirmation) return;
 
-        clearInterval(timerInterval);
+  clearInterval(timerInterval);
 
-        let attempted = 0, notAttempted = 0, score = 0;
-        const results = [];
+  let attempted = 0, notAttempted = 0, score = 0;
+  const results = [];
 
-        questions.forEach(q => {
-                if (q.attempted) {
-                        attempted++;
-                        if (q.selected === q.answer_en || q.selected === q.answer_hi) {
-                                score++;
-                        }
-                } else {
-                        notAttempted++;
-                }
-                results.push({ question: q.question_en, selected: q.selected || "Not Answered", correct: q.answer_en });
-        });
+  questions.forEach(q => {
+      if (q.attempted) {
+          attempted++;
+          if (q.selected === q.answer_en || q.selected === q.answer_hi) {
+              score++;
+          }
+      } else {
+          notAttempted++;
+      }
+      results.push({ 
+          question: language === "en" ? q.question_en : q.question_hi, 
+          selected: q.selected || (language === "en" ? "Not Answered" : "उत्तर नहीं दिया"), 
+          correct: language === "en" ? q.answer_en : q.answer_hi 
+      });
+  });
 
-        localStorage.setItem("attempted", attempted);
-        localStorage.setItem("notAttempted", notAttempted);
-        localStorage.setItem("score", score);
-        localStorage.setItem("results", JSON.stringify(results));
+  localStorage.setItem("attempted", attempted);
+  localStorage.setItem("notAttempted", notAttempted);
+  localStorage.setItem("score", score);
+  localStorage.setItem("results", JSON.stringify(results));
 
-        let viewResult = confirm("Test submitted successfully! Do you want to view your result?");
-        if (viewResult) {
-                window.location.href = "/Deshbord/category/test/submit-test.html";
-        }
+  let viewResult = confirm(language === "en" 
+      ? "Test submitted successfully! Do you want to view your result?" 
+      : "टेस्ट सफलतापूर्वक सबमिट हो गया! क्या आप अपना परिणाम देखना चाहेंगे?");
+  if (viewResult) {
+      window.location.href = "/Deshbord/category/test/submit-test.html";
+  }
 }
 
 function startTimer() {
-        const timerElement = document.getElementById("timer");
-        timeLeft = 180 * 60; // Convert 180 minutes to seconds (180 × 60)
+  const timerElement = document.getElementById("timer");
+  timeLeft = 180 * 60; // Convert 180 minutes to seconds (180 × 60)
 
-        timerInterval = setInterval(() => {
-                if (timeLeft <= 0) {
-                        clearInterval(timerInterval);
-                        alert("Time's up! Submitting the quiz automatically.");
-                        submitQuiz();
-                } else {
-                        const hours = Math.floor(timeLeft / 3600);
-                        const minutes = Math.floor((timeLeft % 3600) / 60);
-                        const seconds = timeLeft % 60;
+  timerInterval = setInterval(() => {
+      if (timeLeft <= 0) {
+          clearInterval(timerInterval);
+          alert(language === "en" ? "Time's up! Submitting the quiz automatically." : "समय समाप्त! स्वचालित रूप से क्विज सबमिट की जा रही है।");
+          submitQuiz();
+      } else {
+          const hours = Math.floor(timeLeft / 3600);
+          const minutes = Math.floor((timeLeft % 3600) / 60);
+          const seconds = timeLeft % 60;
 
-                        // Format as HH:MM:SS with leading zeros
-                        timerElement.textContent = `Time Left: ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-                        timeLeft--;
-                }
-        }, 1000);
+          // Format as HH:MM:SS with leading zeros
+          timerElement.textContent = language === "en" 
+              ? `Time Left: ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`
+              : `शेष समय: ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+          timeLeft--;
+      }
+  }, 1000);
 }
+
 function updateNavigation() {
-        const navElement = document.getElementById("circleContainer");
-        navElement.innerHTML = "";
+  const navElement = document.getElementById("circleContainer");
+  navElement.innerHTML = "";
 
-        questions.forEach((q, index) => {
-                let color = "gray"; // Default not visited
-                if (q.attempted) {
-                        color = "green"; // Answered
-                }
-                if (q.selected === "") {
-                        color = "gray"; // Not answered
-                }
-                if (index === currentQuestion) {
-                        color = "blue"; // Current question
-                }
-                navElement.innerHTML += `<div class='circle' style='background-color: ${color};' onclick='loadQuestion(${index})'>${index + 1}</div>`;
-        });
+  questions.forEach((q, index) => {
+      let color = "gray"; // Default not visited
+      if (q.attempted) {
+          color = "green"; // Answered
+      }
+      if (index === currentQuestion) {
+          color = "blue"; // Current question
+      }
+      navElement.innerHTML += `<div class='circle' style='background-color: ${color};' onclick='loadQuestion(${index})'>${index + 1}</div>`;
+  });
 }
 
-window.onload = function () {
-        loadQuestion(currentQuestion);
-        startTimer();
+window.onload = function() {
+  loadQuestion(currentQuestion);
+  startTimer();
 };
